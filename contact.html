@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stanley | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+
+    <div class="site-wrapper">
+        <!-- Dark Top Header Navigation -->
+        <header class="navbar">
+            <nav>
+                <a href="index.html">Home</a> |
+                <a href="about-me.html">About Me</a> |
+                <a href="projects.html">Projects</a> |
+                <a href="planner.html">Academic Planner</a> |
+                <a href="contact.html">Contact Me</a>
+            </nav>
+        </header>
+
+        <!-- Main Display Container Center-Aligned Over Split Line -->
+        <main class="portfolio-container">
+            <div class="card">
+
+                <!-- Left Profile Block -->
+                <div class="form-section">
+                </br><h1>Send A Message</h1> </br>
+                    
+                    <form id="contactForm" action="#" method="POST" novalidate>
+                        <label for="name">Name: </label>
+                        <input type="text" id="name" name="name" placeholder="Your full name" required> <br/><br/>
+                        <p id="nameError" class="error"></p>
+
+                        <label for="email">Email: </label>
+                        <input type="email" id="email" name="email" placeholder="Your email address" required> <br/><br/>
+                        <p id="emailError" class="error"></p>
+
+
+                        <label for="phone">Phone:   </label>
+                        <input type="tel" id="phone" name="phone" placeholder="Your phone number" required> </br><br/>
+                        <p id="phoneError" class="error"></p>
+
+
+                        <label for="message">Message: </label>
+                        <textarea name="message" id="message" cols="30" rows="5" placeholder="Type your message here..." required></textarea> <br/>
+                        <p id="messageError" class="error"></p>
+
+                        
+                        <br/>
+
+                        <p id="errorMessage" style="color: red;"></p>
+                        
+                        <input type="submit" value="Send">
+                    </form>
+                </div>
+
+                <!-- Right Content (Text) Block -->
+                <div class="content-section">
+                    <h1>Contact Me</h1>
+                    <hr class="title-underline">
+
+                    <h6><span style="color: green; font-family: 'playfair display',dancing script, cursive; font-size: 1.0rem;">Email: Stanley.nwaizu@gmail.com</span></h6> </br>
+                    <h6><span style="color: green; font-family: 'playfair display',dancing script, cursive; font-size: 1.0rem;">Phone: +2347065673995</span></h6> </br>
+                    <h6><span style="color: green; font-family: 'playfair display',dancing script, cursive; font-size: 1.0rem;">Address: Plot 00B GRA Layout, Ikeja Lagos State, Nigeria.</span></h6> </br></br></br></br></br></br>
+                    
+                </div>
+
+
+            </div>
+        </main> </br>
+
+        <footer class="site-footer">
+            <span class="copyright-text">&copy; 2026 Stanley | All rights reserved</span>
+        </footer>
+
+
+    </div>
+
+<script src="script.js"></script> 
+    
+</body>
+</html>

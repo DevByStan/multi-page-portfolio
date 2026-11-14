@@ -1,0 +1,349 @@
+/* Base Reset & Typography */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html body {
+    height: 100%;
+}
+
+
+/* Main layout Framework (Split-Color Framing) */
+.site-wrapper {
+    background-color: #002147; /* Deep navy blue covers upper half */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+}
+
+/* Generates the light gray canvas on the bottom half */
+.site-wrapper::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%; /* Covers exactly the lower 50% of the screen view height */
+    background-color: #eff2f6; /* Lighter surface tone under the card */
+    z-index: -1; /* Placed cleanly behind the white card layer */
+}
+
+/* Header & Navigation Links */
+.navbar {
+    max-width: 100%;
+    padding: 25px 60px 25px 60px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbar nav {
+    color: #4a5d78; /* Muted color for divider pipes "|" */
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 12px;
+    transition: color 0.5s ease-in-out;
+}
+
+.navbar a:hover {
+    color: #2b7fff; /* Distinct blue color accent link */
+    text-decoration: underline;
+    text-underline-offset: 16px;
+    text-decoration-thickness: 4px;
+    text-decoration-color: gold;
+}
+
+
+/* Portfolio Content Card Panel */
+.portfolio-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 60px 50px 60px;
+}
+
+.card {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 2000px;
+    min-height: 550px;
+    border-radius: 12px;
+    display: flex;
+    overflow: hidden;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.18);
+}
+
+/* Left Profile Area */
+.profile-section {
+    flex: 1;
+    background-color: #f7f9fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+
+
+/* Left Profile Area (About Me Page) */
+.picture-section {
+    flex: 1;
+    background-color: #f7f9fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 40px 900px 40px;
+}
+
+
+.profile-img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Right Text Area */
+.content-section {
+    flex: 1.4;
+    padding: 55px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content-section h1 {
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: #0c1527;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+}
+
+.title-underline {
+    border: none;
+    height: 4px;
+    width: 520px;
+    background-color: #2b7fff;
+    margin-bottom: 35px;
+    border-radius: 4px;
+}
+
+.content-section h2 {
+    font-size: 1.55rem;
+    font-weight: 700;
+    color: #0c1527;
+    margin-bottom: 15px;
+}
+
+.content-section p {
+    font-size: 1rem;
+    line-height: 1.65;
+    color: #404852;
+    margin-bottom: 22px;
+    text-align: justify;
+}
+
+/* Remove bottom margin on final block element */
+.content-section p:last-child {
+    margin-bottom: 0;
+}
+
+/* Projects Page Stlying Begins Here */
+.project-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 60px 50px 60px;
+}
+
+.project-card {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 2000px;
+    min-height: 550px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.18);
+}
+
+section {
+    max-width: auto;
+    margin: 60px;
+    padding: 60px 60px;
+    background-color: #eff2f6;
+    border-radius: 12px;
+    box-shadow: none;
+}
+
+article {
+    background-color: white;
+    border-left: 4px solid #2b7fff;
+    border-radius: 8px;
+    padding: 40px;
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+
+
+
+
+/* Responsive Adaptive Interface Layout */
+@media (max-width: 868px) {
+    .card {
+        flex-direction: column;
+        max-width: 550px;
+    }
+
+    .profile-section {
+        padding: 50px 40px 30px 40px;
+    }
+
+    .profile-img {
+        max-width: 220px;
+    }
+
+    .content-section {
+        padding: 35px 40px 50px 40px;
+    }
+
+    .navbar {
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .portfolio-container {
+        padding: 10px 25px 40px 25px;
+    }
+
+}
+
+
+/* Send A Message Section Begins Here */
+.form-section {
+    max-width: 800px;
+    min-width: 400px;
+    margin: 40px 40px;
+    padding: 30px;
+    background-color: #F4F6F9;
+    border-radius: 12px;
+    box-shadow: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;   
+}
+
+.form-section h1 {
+    text-align: center;
+    margin-bottom: 24px;
+    color: #333333;
+    font-size: 24px;
+}
+
+.form-section label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555555;
+    font-size: 14px;
+}
+
+.form-section input[type="text"],
+.form-section input[type="email"],
+.form-section input[type="tel"],
+.form-section textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 4px;
+}
+
+.form-section input:focus,
+.form-section textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 225, 0.2);
+    outline: none;
+}
+
+.form-section input[type="submit"] {
+    width: 100px;
+    padding: 12px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.form-section input[type="submit"]:hover {
+    background-color: #0056b3;
+} 
+
+.error {
+    color: #ff4d4d;
+    font-size: 0.9rem;
+    font-weight: italics;
+    margin-bottom: 14px;
+}
+/* Send A Message Section Ends Here */
+
+
+
+
+/* Projects Repository List */
+.project-list {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.protect-text {
+    flex: 1;
+}
+
+.project-image {
+    width: 200px;
+    height: auto;
+    border-radius: 4px;
+}
+
+.site-footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #002147;
+    padding: 18px 0;
+    text-align: center;
+    z-index: 1000;
+}
+
+.copyright-text {
+    font-family: "Segoe UI, -apple-system", -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+    font-size: 18px;
+    color: #ffffff;
+    letter-spacing: 0.3px;
+    display: inline-block;
+}
